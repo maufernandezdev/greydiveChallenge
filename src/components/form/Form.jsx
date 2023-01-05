@@ -5,6 +5,7 @@ import sendForm from '../../utils/sendForm';
 import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import './form.css';
+import { items } from '../../db/db.json'
 
 const Form = () => {
 
@@ -28,19 +29,8 @@ const Form = () => {
     );
 
     useEffect(() => {
-        
-        (async () => {
-            try {
-                const response = await fetch('../../../src/db/db.json');
-                const {items} = await response.json();
-                console.log(items);
-                setFields(items);
-                setInitialFormBasedOnDbItems(items);
-            } catch (error) {
-                notifyError(error);
-            }
-        })();
-
+        setFields(items);
+        setInitialFormBasedOnDbItems(items);
     },[]);
 
     const handleSubmit = async (e) =>
