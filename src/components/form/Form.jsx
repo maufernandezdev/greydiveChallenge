@@ -31,12 +31,12 @@ const Form = () => {
         
         (async () => {
             try {
-                const response = await fetch('src/db/db.json');
+                const response = await fetch('../../../src/db/db.json');
                 const {items} = await response.json();
                 setFields(items);
                 setInitialFormBasedOnDbItems(items);
             } catch (error) {
-                return notifyError(error);
+                notifyError(error);
             }
         })();
 
