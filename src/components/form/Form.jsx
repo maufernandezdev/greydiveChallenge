@@ -33,6 +33,7 @@ const Form = () => {
             try {
                 const response = await fetch('../../../src/db/db.json');
                 const {items} = await response.json();
+                console.log(items);
                 setFields(items);
                 setInitialFormBasedOnDbItems(items);
             } catch (error) {
