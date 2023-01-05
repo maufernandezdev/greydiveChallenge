@@ -7,7 +7,7 @@ const Home = () => {
     <>  
         <section className='container'>
           <h1>Greydive Challenge</h1>
-          <h2>Developed by <a href="https://github.com/maufernandezdev" target='_blank'>Mauricio Fernandez</a> </h2>
+          <h2>Developed by <a href="https://github.com/maufernandezdev/greydiveChallenge" target='_blank'>Mauricio Fernandez</a> </h2>
           <section className='container__form'>
             <img src={formImage} alt="form-image" />
             <Form></Form>
