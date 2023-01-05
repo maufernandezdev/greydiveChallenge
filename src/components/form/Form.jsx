@@ -48,18 +48,19 @@ const Form = () => {
         const now = new Date().toISOString().slice(0,10);
         if(values.birth_date > now)
         {
-            return notifyError('Fecha mayor a dia actual!');
+            notifyError('Fecha mayor a dia actual!');
+            return;
         }
 
         const response = await sendForm(values);
         if(response.id)
         {
             notifySuccess('Formulario enviado!');
-            return setTimeout(() => {
+            setTimeout(() => {
                 navigate('/forms');
             }, 1500);
         }
-        return notifyError(response.error);
+        notifyError(response.error);
     }
 
     const setInitialFormBasedOnDbItems = (items) =>
