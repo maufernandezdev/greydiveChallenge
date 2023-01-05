@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  width: 100%;
+  font-size: 2em;
+}
+h2 {
+  width: 100%;
+  font-size: 1.5em;
+  line-height: 1.5;
+  width: 250px;
+}
+
+.container h2 a{
+  font-family: 'Roboto', sans-serif;
+  color: #003DFF;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.container h2 a:hover{
+  border-bottom: 1px solid #003DFF;
+  cursor:default;
+}
+
+.container__form{
+  margin-top: 1.5em;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  padding: 1em;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container__form img{
+  width: 100%;
+  max-width: 500px;
+  padding: 2em;
+}
+
+/* Form container */
+.forms__container{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0px auto;
+}
+.forms__container h2{
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+.forms__container .link__container{
+  width: 100%;
+}
+
+.forms__container .link__container a{
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #003DFF;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.forms__container .link__container a:hover{
+  text-decoration-line: underline;
+  cursor:default;
+}
+
+@media (min-width: 1024px)
+{
+  h1 {
+    width: 100%;
+    font-size: 3.2em;
+  }
+
+  h2{
+    width: 100%;
+  }
+
+  .container__form{
+    margin-top: 1em;
+  }
+
+  .forms__container h2{
+    font-size: 3.2em;
+    line-height: 0;
+  }
+}
