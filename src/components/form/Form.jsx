@@ -47,11 +47,11 @@ const Form = () => {
         if(response.id)
         {
             notifySuccess('Formulario enviado!');
-            setTimeout(() => {
+            return setTimeout(() => {
                 navigate('/forms');
             }, 1500);
         }
-        notifyError(response.error);
+        return notifyError(response.error);
     }
 
     const setInitialFormBasedOnDbItems = (items) =>
