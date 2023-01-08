@@ -12,7 +12,12 @@ const FormsContainer = () => {
     (async () => {
         try{
             const forms = await getCollection('forms');
-            setForms(forms);
+            const LAST_ID = localStorage.getItem('LAST_ID');
+            const lastObject = forms.find(form => form.id == LAST_ID);
+            const orderList = [lastObject];
+            const orderFormList = forms.filter(form => form.id !== LAST_ID);
+            orderList.push(...orderFormList);
+            setForms(orderList);
         }
         catch (error) {
             console.log(error)

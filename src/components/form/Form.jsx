@@ -45,7 +45,9 @@ const Form = () => {
 
         const response = await sendForm(values);
         if(response.id)
-        {
+        {   
+            console.log(response.id)
+            localStorage.setItem('LAST_ID', response.id);
             notifySuccess('Formulario enviado!');
             return setTimeout(() => {
                 navigate('/forms');
