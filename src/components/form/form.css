@@ -3,7 +3,8 @@ form{
     display: flex;
     flex-wrap: wrap;
     padding: 0.5em;
-    max-width: 500px;   
+    max-width: 500px;
+    background-color: #fff;   
 }
 
 form div{
@@ -43,7 +44,6 @@ form div label[data="terms_and_conditions"] {
     margin-top: 1em;
     width: 90%;
     font-size: 0.8em;
-    /* background-color: red; */
 }
 
 form div input[type="checkbox"]{

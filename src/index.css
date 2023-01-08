@@ -50,8 +50,9 @@ h2 {
 .container__form{
   margin-top: 1.5em;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.1);
+  background-color: #fff;
+  border-radius: 4px;
   padding: 1em;
   display:flex;
   flex-wrap: wrap;
@@ -65,21 +66,27 @@ h2 {
 }
 
 /* Form container */
-.forms__container{
+.forms__items__container{
   width: 100%;
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 500px;
   margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0px;
+  justify-content: center;
 }
 .forms__container h2{
   font-size: 1.5em;
   line-height: 1.5;
+  width: 100%;
 }
 
 .forms__container .link__container{
   width: 100%;
+  margin-bottom: 1em;
 }
 
 .forms__container .link__container a{
@@ -89,9 +96,20 @@ h2 {
   transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
+.forms__container .link__container svg{
+  position: relative;
+  top: 3.85px;
+  left: -6.5px;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
 .forms__container .link__container a:hover{
-  text-decoration-line: underline;
+
+  border-bottom: 1px solid #003DFF;
   cursor:default;
+}
+.forms__container .link__container a:hover > svg{
+  left: 4px;
 }
 
 @media (min-width: 1024px)
@@ -108,9 +126,19 @@ h2 {
   .container__form{
     margin-top: 1em;
   }
+  .forms__items__container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1024px;
+  }
 
   .forms__container h2{
     font-size: 3.2em;
     line-height: 0;
+    margin-bottom: 1em;
+  }
+  .forms__container .link__container{
+    width: 100%;
+    margin-bottom: 2em;
   }
 }

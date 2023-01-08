@@ -12,6 +12,7 @@ Then all the documents of the data collection are shown in the path "/forms"
 
 - Firebase - npm install firebase
 - React hot toast - npm install react-hot-toast
+- React Icons - npm install react-icons --save
 - To install all - npm install
 
 ## To start
