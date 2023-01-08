@@ -11,13 +11,17 @@ const FormsContainer = () => {
 
     (async () => {
         try{
-            const forms = await getCollection('forms');
+            const formsCollection = await getCollection('forms');
             const LAST_ID = localStorage.getItem('LAST_ID');
-            const lastObject = forms.find(form => form.id == LAST_ID);
-            const orderList = [lastObject];
-            const orderFormList = forms.filter(form => form.id !== LAST_ID);
-            orderList.push(...orderFormList);
-            setForms(orderList);
+            const lastObject = formsCollection.find(form => form.id == LAST_ID);
+            if(lastObject)
+            {   
+                const orderList = [lastObject];
+                const orderFormList = formsCollection.filter(form => form.id !== LAST_ID);
+                orderList.push(...orderFormList);
+                setForms(orderList);
+            }
+            else setForms(formsCollection);
         }
         catch (error) {
             console.log(error)

@@ -13,18 +13,17 @@
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
-.last__item::before{
+.form__item:nth-child(1)::before{
 
     position: absolute;
-    content: 'Your Form';
+    content: 'Su formulario!';
     background-color: #003DFF;
     border: 2px solid #ebebeb;
     color: #fff;
     padding: 0.7em;
     padding: 10px 20px;
     border-radius: 30px;
-    /* border-radius: 7px; */
-    margin-left: -3.85em;
+    margin-left: -4.8em;
     margin-top: -2.2em;
     font-size: 0.8em;
     line-height: 2;
